@@ -1,8 +1,8 @@
 'use strict';
 
 const mainFunction = callback => {
-    const num = prompt('Enter number');
-    const degree = prompt('Enter number degree');
+    const num = +prompt('Enter number');
+    const degree = +prompt('Enter number degree');
     return callback(num, degree);
 }
 
