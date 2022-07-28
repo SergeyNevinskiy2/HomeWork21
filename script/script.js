@@ -3,13 +3,10 @@
 const mainFunction = callback => {
     const num = prompt('Enter number');
     const degree = prompt('Enter number degree');
-    if(isNaN(num) && isNaN(degree)) throw new Error('is not number');
-    if(num === '' && degree === '') throw new Error('Empty string');
-    if(num === null && degree === null) throw new Error('You cancel');
     return callback(num, degree);
 }
 
-const exponentiation =  (num, degree) => {
+ const exponentiation =  (num, degree) => {
     const result = Math.pow (num, degree);
     alert(result);
     return result;
