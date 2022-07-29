@@ -1,8 +1,11 @@
 'use strict';
 
 const mainFunction = callback => {
-    const num = +prompt('Enter number');
-    const degree = +prompt('Enter number degree');
+    const num = prompt('Enter number');
+    const degree = prompt('Enter number degree');
+    if (isNaN(num) || isNaN(degree)) return 'Is not a number';
+    if(num === '' || degree === '') return 'Empty string';
+    if(num === null || degree === null) return 'You canceled';
     return callback(num, degree);
 }
 
